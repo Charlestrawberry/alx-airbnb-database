@@ -25,7 +25,7 @@ Before running the script, ensure you have:
 ### Option 1: Using PostgreSQL CLI
 ```bash
 # 1. Create the database
-createdb airbnb_db
+created airbnb_db
 
 # 2. Connect to it
 psql -d airbnb_db
