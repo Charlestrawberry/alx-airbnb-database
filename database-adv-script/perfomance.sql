@@ -1,4 +1,5 @@
 -- 1️⃣ Initial query (unoptimized)
+EXPLAIN
 SELECT 
     b.booking_id,
     u.first_name,
@@ -22,4 +23,4 @@ FROM bookings b
 STRAIGHT_JOIN users u ON b.user_id = u.user_id
 STRAIGHT_JOIN properties p ON b.property_id = p.property_id
 LEFT JOIN payments pay ON b.booking_id = pay.booking_id
-WHERE b.status = 'confirmed';
+WHERE b.total_amount > 100 AND pay.status = 'Completed';
